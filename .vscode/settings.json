@@ -1,3 +1,8 @@
 {
-    "python.pythonPath": "C:\\Users\\ferna\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe"
+    "python.pythonPath": "C:\\Users\\ferna\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint-flask-sqlalchemy",
+        "pylint-flask"
+    ]
 }
