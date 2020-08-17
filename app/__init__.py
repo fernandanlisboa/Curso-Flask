@@ -12,4 +12,5 @@ migrate = Migrate(app, db) #recebe as migrações e o banco de dados que trabalh
 manager = Manager(app) #cuidará dos comandos que serão dados para a inicialização da aplicação
 manager.add_command('db', MigrateCommand)
 
+from app.models import tables, forms
 from app.controllers import default

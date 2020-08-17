@@ -16,7 +16,7 @@ class User(db.Model):
         self.email = email
         
     def __repr__(self): #essa função retorna os usuários e seus nomes 
-        return "<User %r>" &% self.username
+        return "<User %r>" % self.username
     
     
 class Post(db.Model):

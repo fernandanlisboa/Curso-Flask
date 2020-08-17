@@ -1,6 +1,6 @@
 from flask import render_template
 from app import app
-
+from app.models.tables import User
 from app.models.forms import LoginForm
 #aplicando o método route para a função index 
 #criação de uma página
@@ -18,3 +18,10 @@ def login():
         print(form.password.data)
     return render_template('login.html',
                                form = form)
+
+@app.route("/teste/<info>")
+@app.route("/teste", defaults={"info": None})
+def teste(info):
+    i = User("fernandinha", "1234", "Fernanda Lisboa", "fernandinha@mail.com")
+    db.session.add(i)
+    db.session.commit() #salvamento de informações da sessão
